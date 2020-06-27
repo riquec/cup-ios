@@ -8,24 +8,27 @@
 import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
-    fileprivate let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+    @IBOutlet weak var goToCategoryButton: UIStackView!
+    
+    @IBOutlet weak var nicknameInputField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         initListeners()
     }
     
-    private func initListeners() {
-//        inputNickNameField.delegate = self
-    }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        inputNickNameField.endEditing(true)
+        nicknameInputField.endEditing(true)
         return false
     }
     
+    fileprivate func initListeners() {
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard)))
+        nicknameInputField.delegate = self
+    }
+    
     @objc fileprivate func dismissKeyboard() {
-//        inputNickNameField.endEditing(true)
+        nicknameInputField.endEditing(true)
     }
 }
