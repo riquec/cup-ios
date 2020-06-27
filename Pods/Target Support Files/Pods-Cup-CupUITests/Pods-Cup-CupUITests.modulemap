@@ -1,0 +1,6 @@
+framework module Pods_Cup_CupUITests {
+  umbrella header "Pods-Cup-CupUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
