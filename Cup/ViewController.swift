@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViews()
         initListeners()
     }
     
@@ -23,12 +24,38 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    fileprivate func setupViews(){
+        nicknameInputField.addBottomBorderBlack()
+    }
+    
     fileprivate func initListeners() {
+        //dismiss keyboard click anywhere
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard)))
+        
+        //init press return listener
         nicknameInputField.delegate = self
+        
+        //listen when user wants navigate to category
+        goToCategoryButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.validateInputAndGoToCategory)))
+    }
+    
+    fileprivate func saveNicknameAndNavigateToCategory(){
+        print("saveNicknameAndNavigateToCategory")
+    }
+    
+    fileprivate func displayNicknameBlankError(){
+        print("displayNicknameBlankError")
+    }
+    
+    fileprivate func isBlankNickname() -> Bool {
+        return nicknameInputField.text?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ?? true
     }
     
     @objc fileprivate func dismissKeyboard() {
         nicknameInputField.endEditing(true)
+    }
+    
+    @objc fileprivate func validateInputAndGoToCategory() {
+        isBlankNickname() ? displayNicknameBlankError() : saveNicknameAndNavigateToCategory()
     }
 }
