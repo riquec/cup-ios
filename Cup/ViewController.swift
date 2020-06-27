@@ -12,6 +12,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nicknameInputField: UITextField!
     
+    @IBAction func nicknameTextChange(_ sender: UITextField) {
+        if sender.currentColorIsRed() {
+            sender.setBorderColor(color: UIColor.black.cgColor)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         //listen when user wants navigate to category
         goToCategoryButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.validateInputAndGoToCategory)))
+
     }
     
     fileprivate func saveNicknameAndNavigateToCategory(){
@@ -44,7 +50,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     fileprivate func displayNicknameBlankError(){
-        print("displayNicknameBlankError")
+        nicknameInputField.setBorderColor(color: UIColor.red.cgColor)
     }
     
     fileprivate func isBlankNickname() -> Bool {
