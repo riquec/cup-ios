@@ -18,6 +18,9 @@
 		BE5D6F9524A2A6E8002F0FD7 /* CupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D6F9424A2A6E8002F0FD7 /* CupTests.swift */; };
 		BE5D6FA024A2A6E8002F0FD7 /* CupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D6F9F24A2A6E8002F0FD7 /* CupUITests.swift */; };
 		BE5D6FF024A7B781002F0FD7 /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D6FEF24A7B781002F0FD7 /* UITextFieldExtensions.swift */; };
+		BE5D6FF724A7CF26002F0FD7 /* UserRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D6FF624A7CF26002F0FD7 /* UserRespository.swift */; };
+		BE5D6FFB24A7CFD5002F0FD7 /* UserRepositoryDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D6FFA24A7CFD5002F0FD7 /* UserRepositoryDefault.swift */; };
+		BE5D6FFF24A7DAA4002F0FD7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D6FFE24A7DAA4002F0FD7 /* Constants.swift */; };
 		E11655E983BFA956518867F3 /* Pods_Cup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5FEA6D423C2D36A2EF71F4 /* Pods_Cup.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +63,9 @@
 		BE5D6F9F24A2A6E8002F0FD7 /* CupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupUITests.swift; sourceTree = "<group>"; };
 		BE5D6FA124A2A6E8002F0FD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE5D6FEF24A7B781002F0FD7 /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
+		BE5D6FF624A7CF26002F0FD7 /* UserRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRespository.swift; sourceTree = "<group>"; };
+		BE5D6FFA24A7CFD5002F0FD7 /* UserRepositoryDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryDefault.swift; sourceTree = "<group>"; };
+		BE5D6FFE24A7DAA4002F0FD7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C9AA22AFD26FC119F98B56A1 /* Pods-CupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupTests.debug.xcconfig"; path = "Target Support Files/Pods-CupTests/Pods-CupTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDFAA9FB533077E20A796F3E /* Pods-Cup-CupUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cup-CupUITests.release.xcconfig"; path = "Target Support Files/Pods-Cup-CupUITests/Pods-Cup-CupUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CE5FEA6D423C2D36A2EF71F4 /* Pods_Cup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,11 +137,12 @@
 		BE5D6F7C24A2A6E5002F0FD7 /* Cup */ = {
 			isa = PBXGroup;
 			children = (
-				BE5D6FE924A7B708002F0FD7 /* view */,
-				BE5D6F7D24A2A6E5002F0FD7 /* AppDelegate.swift */,
+				BE5D6FFC24A7DA81002F0FD7 /* Commons */,
+				BE5D6FF824A7CF88002F0FD7 /* Data */,
+				BE5D6FF424A7CEF7002F0FD7 /* Domain */,
+				BE5D6FF324A7CE76002F0FD7 /* App */,
+				BE5D6FE924A7B708002F0FD7 /* View */,
 				BE5D6F7F24A2A6E5002F0FD7 /* SceneDelegate.swift */,
-				BE5D6F8124A2A6E6002F0FD7 /* ViewController.swift */,
-				BE5D6F8324A2A6E6002F0FD7 /* Main.storyboard */,
 				BE5D6F8624A2A6E8002F0FD7 /* Assets.xcassets */,
 				BE5D6F8824A2A6E8002F0FD7 /* LaunchScreen.storyboard */,
 				BE5D6F8B24A2A6E8002F0FD7 /* Info.plist */,
@@ -161,20 +168,86 @@
 			path = CupUITests;
 			sourceTree = "<group>";
 		};
-		BE5D6FE924A7B708002F0FD7 /* view */ = {
+		BE5D6FE924A7B708002F0FD7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BE5D6FEE24A7B760002F0FD7 /* extensions */,
+				BE5D6FF124A7CD9E002F0FD7 /* Presentation */,
+				BE5D6FEE24A7B760002F0FD7 /* Extensions */,
 			);
-			path = view;
+			path = View;
 			sourceTree = "<group>";
 		};
-		BE5D6FEE24A7B760002F0FD7 /* extensions */ = {
+		BE5D6FEE24A7B760002F0FD7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				BE5D6FEF24A7B781002F0FD7 /* UITextFieldExtensions.swift */,
 			);
-			path = extensions;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BE5D6FF124A7CD9E002F0FD7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				BE5D6FF224A7CDB6002F0FD7 /* Nickname */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BE5D6FF224A7CDB6002F0FD7 /* Nickname */ = {
+			isa = PBXGroup;
+			children = (
+				BE5D6F8324A2A6E6002F0FD7 /* Main.storyboard */,
+				BE5D6F8124A2A6E6002F0FD7 /* ViewController.swift */,
+			);
+			path = Nickname;
+			sourceTree = "<group>";
+		};
+		BE5D6FF324A7CE76002F0FD7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BE5D6F7D24A2A6E5002F0FD7 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BE5D6FF424A7CEF7002F0FD7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BE5D6FF524A7CF01002F0FD7 /* Repositories */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BE5D6FF524A7CF01002F0FD7 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BE5D6FF624A7CF26002F0FD7 /* UserRespository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BE5D6FF824A7CF88002F0FD7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BE5D6FF924A7CFA8002F0FD7 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BE5D6FF924A7CFA8002F0FD7 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				BE5D6FFA24A7CFD5002F0FD7 /* UserRepositoryDefault.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		BE5D6FFC24A7DA81002F0FD7 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				BE5D6FFE24A7DAA4002F0FD7 /* Constants.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		CA822FF54C45206BD12CAB81 /* Frameworks */ = {
@@ -428,7 +501,10 @@
 			files = (
 				BE5D6F8224A2A6E6002F0FD7 /* ViewController.swift in Sources */,
 				BE5D6FF024A7B781002F0FD7 /* UITextFieldExtensions.swift in Sources */,
+				BE5D6FF724A7CF26002F0FD7 /* UserRespository.swift in Sources */,
 				BE5D6F7E24A2A6E5002F0FD7 /* AppDelegate.swift in Sources */,
+				BE5D6FFF24A7DAA4002F0FD7 /* Constants.swift in Sources */,
+				BE5D6FFB24A7CFD5002F0FD7 /* UserRepositoryDefault.swift in Sources */,
 				BE5D6F8024A2A6E5002F0FD7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
