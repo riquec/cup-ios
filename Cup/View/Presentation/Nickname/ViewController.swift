@@ -13,27 +13,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var goToCategoryButton: UIStackView!
     
-    @IBOutlet weak var nicknameInputField: UITextField!
+    @IBOutlet weak var nicknameInputField: UITextFielBorderBottom!
     
-    @IBAction func nicknameTextChange(_ sender: UITextField) {
-        if sender.currentColorIsRed() {
-            sender.setBorderColor(color: UIColor.black.cgColor)
+    @IBAction func nicknameTextChange(_ sender: UITextFielBorderBottom) {
+        if sender.currentColorIsRed(){
+            sender.setLineColor(color: UIColor.black.cgColor)
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupViews()
         initListeners()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nicknameInputField.endEditing(true)
         return false
-    }
-    
-    fileprivate func setupViews(){
-        nicknameInputField.addBottomBorderBlack()
     }
     
     fileprivate func initListeners() {
@@ -53,7 +48,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     fileprivate func displayNicknameBlankError(){
-        nicknameInputField.setBorderColor(color: UIColor.red.cgColor)
+        nicknameInputField.setLineColor(color: UIColor.red.cgColor)
     }
     
     fileprivate func isBlankNickname() -> Bool {
