@@ -14,7 +14,8 @@ class NicknameViewModel {
     fileprivate let repository : UserRespository = Resolver.resolve()
     
     func saveNickname(nickname: String){
+        print("save nickname in viewmodel called")
         repository.saveNickname(nickname: nickname)
-        print("called view model")
+        
     }
 }
