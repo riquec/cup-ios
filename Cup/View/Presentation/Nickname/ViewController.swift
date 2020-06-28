@@ -49,8 +49,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     fileprivate func saveNicknameAndNavigateToCategory(){
-        nicknameViewModel.saveNickname(nickname : "teste")
-        print("saveNicknameAndNavigateToCategory")
+        nicknameViewModel.saveNickname(nickname: nicknameInputField.text ?? "empty")
     }
     
     fileprivate func displayNicknameBlankError(){
