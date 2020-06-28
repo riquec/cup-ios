@@ -9,7 +9,6 @@
 import Foundation
 
 class UserRepositoryDefault : UserRespository {
-    
     func saveNickname(nickname: String) {
         DispatchQueue.global(qos: .background).async {
             UserDefaults.standard.set(nickname, forKey: Constants.UserDefault.NICKNAME_KEY)

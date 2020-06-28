@@ -6,8 +6,11 @@
 //  Copyright © 2020 Jardim. All rights reserved.
 //
 import UIKit
+import Resolver
 
 class ViewController: UIViewController, UITextFieldDelegate {
+    fileprivate let nicknameViewModel: NicknameViewModel = Resolver.resolve()
+
     @IBOutlet weak var goToCategoryButton: UIStackView!
     
     @IBOutlet weak var nicknameInputField: UITextField!
@@ -46,6 +49,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     fileprivate func saveNicknameAndNavigateToCategory(){
+        nicknameViewModel.saveNickname(nickname : "teste")
         print("saveNicknameAndNavigateToCategory")
     }
     
