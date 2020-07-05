@@ -1,9 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
-  - Bond (7.6.6):
-    - Differ (~> 1.4)
-    - ReactiveKit (~> 3.14)
-  - Differ (1.4.5)
+  - DIKit (1.5.0)
   - MaterialComponents/ActionSheet (110.0.0):
     - MaterialComponents/Availability
     - MaterialComponents/BottomSheet
@@ -111,40 +108,35 @@ PODS:
     - MDFTextAccessibility
   - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.0)
-  - ReactiveKit (3.17.1)
-  - Resolver (1.0.7)
+  - Observable (2.0.1)
 
 DEPENDENCIES:
   - Alamofire (= 4.9.1)
-  - Bond
+  - DIKit (~> 1.5)
   - MaterialComponents/ActionSheet
   - "MaterialComponents/TextControls+FilledTextAreas"
   - "MaterialComponents/TextControls+FilledTextFields"
   - "MaterialComponents/TextControls+OutlinedTextAreas"
   - "MaterialComponents/TextControls+OutlinedTextFields"
-  - Resolver
+  - Observable
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - Bond
-    - Differ
+    - DIKit
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
-    - ReactiveKit
-    - Resolver
+    - Observable
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  Bond: 9e7d901cf4ed825b6004a93dd0a7f1c7479e2834
-  Differ: 3b6bd78e2b20cc795d9a86f7641d087524e4273e
+  DIKit: d44a18834f683ebdcc840f35d45fd640a639cde4
   MaterialComponents: 8de2f7a102ae37bf276a558ac88086780f6d1b5f
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
-  ReactiveKit: f578a74d3555296ea61fab228f5245a4ed7b4b27
-  Resolver: da30396fcabb46790959209430a4a0a9e6e39849
+  Observable: c94150db5a2e43391d46a247bd395ce1a544b81a
 
-PODFILE CHECKSUM: 25a4b3ccc8ef22ecb1585e914434b4742e1659d7
+PODFILE CHECKSUM: 4b3fb01886924f038bde1ce616c6f36d98de52e7
 
 COCOAPODS: 1.9.3

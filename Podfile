@@ -7,8 +7,8 @@ target 'Cup' do
   pod 'MaterialComponents/TextControls+FilledTextAreas'
   pod 'MaterialComponents/TextControls+FilledTextFields'
   pod 'MaterialComponents/TextControls+OutlinedTextAreas'
-  pod 'Bond'
-  pod "Resolver"
+  pod 'Observable'
+  pod 'DIKit', '~> 1.5'
   pod 'MaterialComponents/TextControls+OutlinedTextFields'
 
   target 'CupTests' do

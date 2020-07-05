@@ -7,15 +7,38 @@
 //
 
 import Foundation
-import Bond
-import Resolver
+import DIKit
+import Observable
 
 class NicknameViewModel {
-    fileprivate let repository : UserRespository = Resolver.resolve()
+    var shouldDisplayErrorObservable : Observable<Bool> {
+        return shouldDisplayError
+    }
     
-    func saveNickname(nickname: String){
-        print("save nickname in viewmodel called")
-        repository.saveNickname(nickname: nickname)
-        
+    var shouldNavigateToCategoryObservable : Observable<Bool> {
+        return shouldNavigateToCategory
+    }
+    
+    
+    fileprivate let shouldDisplayError = MutableObservable<Bool>(false)
+    fileprivate let shouldNavigateToCategory = MutableObservable<Bool>(false)
+    
+    fileprivate let repository : UserRespository
+    
+    init(repository: UserRespository = resolve()) {
+        self.repository = repository
+    }
+    
+    func validateAndSaveNickname(nickname: String?){
+        if isValidNickname(nickname : nickname) {
+            repository.saveNickname(nickname: nickname!)
+            shouldNavigateToCategory.wrappedValue = true
+        } else {
+            shouldDisplayError.wrappedValue = true
+        }
+    }
+    
+    fileprivate func isValidNickname(nickname : String?) -> Bool {
+        return !(nickname?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ?? false)
     }
 }
