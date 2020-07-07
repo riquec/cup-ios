@@ -9,10 +9,10 @@ import UIKit
 import DIKit
 import Observable
 
-class ViewController: UIViewController, UITextFieldDelegate {
-    fileprivate var disposables = Disposal()
+class ViewController: UIViewController, UITextFieldDelegate, Storyboarded {
+    @LazyInject var nicknameViewModel: NicknameViewModel
     
-    @LazyInject fileprivate var nicknameViewModel: NicknameViewModel
+    fileprivate var disposables = Disposal()
 
     @IBOutlet weak var goToCategoryButton: UIStackView!
     

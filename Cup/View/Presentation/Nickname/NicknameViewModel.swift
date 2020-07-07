@@ -11,6 +11,8 @@ import DIKit
 import Observable
 
 class NicknameViewModel {
+    var coordinator: NicknameCoordinator?
+    
     var shouldDisplayErrorObservable : Observable<Bool> {
         return shouldDisplayError
     }
@@ -31,8 +33,9 @@ class NicknameViewModel {
     
     func validateAndSaveNickname(nickname: String?){
         if isValidNickname(nickname : nickname) {
-            repository.saveNickname(nickname: nickname!)
-            shouldNavigateToCategory.wrappedValue = true
+//            repository.saveNickname(nickname: nickname!)
+//            shouldNavigateToCategory.wrappedValue = true
+            coordinator?.goToCategory()
         } else {
             shouldDisplayError.wrappedValue = true
         }

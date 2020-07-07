@@ -22,6 +22,11 @@
 		BE5D6FFF24A7DAA4002F0FD7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D6FFE24A7DAA4002F0FD7 /* Constants.swift */; };
 		BE5D700124A7DB83002F0FD7 /* NicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5D700024A7DB83002F0FD7 /* NicknameViewModel.swift */; };
 		BE7B96EE24B254B200054F31 /* ViewModelModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7B96ED24B254B200054F31 /* ViewModelModule.swift */; };
+		BE7B96F124B3DB6900054F31 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7B96F024B3DB6900054F31 /* Coordinator.swift */; };
+		BE7B96F324B3DCCD00054F31 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7B96F224B3DCCD00054F31 /* Storyboarded.swift */; };
+		BE7B96F524B3E1A200054F31 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7B96F424B3E1A200054F31 /* MainCoordinator.swift */; };
+		BE7B96FA24B3EF7F00054F31 /* NicknameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7B96F924B3EF7F00054F31 /* NicknameCoordinator.swift */; };
+		BE7B970024B3FA5F00054F31 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7B96FF24B3FA5F00054F31 /* CategoryViewController.swift */; };
 		BECF3AC524A912A90062B84C /* UITextFielBorderBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF3AC424A912A90062B84C /* UITextFielBorderBottom.swift */; };
 		BECF3AD624B0DF150062B84C /* RepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECF3AD524B0DF150062B84C /* RepositoryModule.swift */; };
 		E11655E983BFA956518867F3 /* Pods_Cup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5FEA6D423C2D36A2EF71F4 /* Pods_Cup.framework */; };
@@ -70,6 +75,11 @@
 		BE5D6FFE24A7DAA4002F0FD7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BE5D700024A7DB83002F0FD7 /* NicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewModel.swift; sourceTree = "<group>"; };
 		BE7B96ED24B254B200054F31 /* ViewModelModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelModule.swift; sourceTree = "<group>"; };
+		BE7B96F024B3DB6900054F31 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		BE7B96F224B3DCCD00054F31 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		BE7B96F424B3E1A200054F31 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		BE7B96F924B3EF7F00054F31 /* NicknameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameCoordinator.swift; sourceTree = "<group>"; };
+		BE7B96FF24B3FA5F00054F31 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		BECF3AC424A912A90062B84C /* UITextFielBorderBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFielBorderBottom.swift; sourceTree = "<group>"; };
 		BECF3AD524B0DF150062B84C /* RepositoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModule.swift; sourceTree = "<group>"; };
 		C9AA22AFD26FC119F98B56A1 /* Pods-CupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CupTests.debug.xcconfig"; path = "Target Support Files/Pods-CupTests/Pods-CupTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +153,7 @@
 		BE5D6F7C24A2A6E5002F0FD7 /* Cup */ = {
 			isa = PBXGroup;
 			children = (
+				BE7B96EF24B3DB5300054F31 /* Coordinators */,
 				BE5D700224A8D3F2002F0FD7 /* DI */,
 				BE5D6FFC24A7DA81002F0FD7 /* Commons */,
 				BE5D6FF824A7CF88002F0FD7 /* Data */,
@@ -195,6 +206,7 @@
 		BE5D6FF124A7CD9E002F0FD7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BE7B96F624B3E54F00054F31 /* Category */,
 				BE5D6FF224A7CDB6002F0FD7 /* Nickname */,
 			);
 			path = Presentation;
@@ -214,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				BE5D6F7D24A2A6E5002F0FD7 /* AppDelegate.swift */,
+				BE7B96F224B3DCCD00054F31 /* Storyboarded.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -265,6 +278,24 @@
 				BE7B96ED24B254B200054F31 /* ViewModelModule.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		BE7B96EF24B3DB5300054F31 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				BE7B96F024B3DB6900054F31 /* Coordinator.swift */,
+				BE7B96F424B3E1A200054F31 /* MainCoordinator.swift */,
+				BE7B96F924B3EF7F00054F31 /* NicknameCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		BE7B96F624B3E54F00054F31 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				BE7B96FF24B3FA5F00054F31 /* CategoryViewController.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		BECF3AC324A9128B0062B84C /* CustomViews */ = {
@@ -530,10 +561,15 @@
 				BE5D6FF724A7CF26002F0FD7 /* UserRespository.swift in Sources */,
 				BECF3AD624B0DF150062B84C /* RepositoryModule.swift in Sources */,
 				BE5D6F7E24A2A6E5002F0FD7 /* AppDelegate.swift in Sources */,
+				BE7B96F124B3DB6900054F31 /* Coordinator.swift in Sources */,
 				BE5D700124A7DB83002F0FD7 /* NicknameViewModel.swift in Sources */,
 				BE5D6FFF24A7DAA4002F0FD7 /* Constants.swift in Sources */,
 				BE5D6FFB24A7CFD5002F0FD7 /* UserRepositoryDefault.swift in Sources */,
+				BE7B970024B3FA5F00054F31 /* CategoryViewController.swift in Sources */,
+				BE7B96F524B3E1A200054F31 /* MainCoordinator.swift in Sources */,
 				BE5D6F8024A2A6E5002F0FD7 /* SceneDelegate.swift in Sources */,
+				BE7B96FA24B3EF7F00054F31 /* NicknameCoordinator.swift in Sources */,
+				BE7B96F324B3DCCD00054F31 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
